@@ -44,6 +44,93 @@ body {
 
 /** ==== INDEX.HTML ====  */
 
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container .header-box {
+    display: flex;
+    justify-content: space-between;
+    background: aqua;
+    padding: 30px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.flex-container .header-box .gerb {
+    width: 100px;
+    height: 100px;
+}
+
+.flex-container .center-box {
+    text-align: center;
+}
+
+.flex-container .center-box h1 {
+    color: crimson;
+}
+
+.flex-container .menu-box {
+    padding: 0px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.flex-container .menu-box h3,
+h4 {
+    color: #009988;
+}
+
+.menu-box table {
+    font-size: 20px;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 20px;
+    background: rgb(248, 233, 228);
+}
+
+.menu-box table th h3 {
+    margin: 10px;
+}
+
+.menu-box table td a {
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu-box table th,
+td {
+    padding: 5px 10px;
+    border: 1px solid #009988;
+}
+
+.menu-box table th {
+    font-weight: 700;
+}
+
+.menu-box table td {
+    font-weight: 500;
+}
+
+.menu-box .footer-box {
+    color: #999;
+    background: #333;
+    padding: 30px 20px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+.menu-box .footer-box .footer {
+    margin: auto;
+}
+
+
+.menu-box .footer-box .footer div img {
+    margin: 10px 10px -6px;
+}
+
 
 /** ==== QUIZ.HTML ==== */
 /** ==== home-box ==== */
@@ -113,11 +200,13 @@ body {
 .quiz-box .question-text {
     font-size: 22px;
     color: #000; 
-    font-weight: 400;
+    font-weight: 500;
     padding: 20px 0px;
     line-height: 28px;
     margin: 0;  
 }
+
+
 .quiz-box .option-container .option {
     background-color: #ccc;
     padding: 13px 15px;
@@ -188,17 +277,19 @@ body {
     margin: 5px 5px;
 }
 .quiz-box .answers-indicator {
-    border-top: 1px solid #ccc
-}
-.quiz-box .answers-indicator div{
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  background-color: #ccc;
-  border-radius: 20px;
-  margin-right: 3px;
-  margin-top: 10px;
-}
+    border-top: 1px solid #ccc;
+    margin-top: 3px;
+    padding-top: 3px;
+  }
+  .quiz-box .answers-indicator div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: #ccc;
+    border-radius: 20px;
+    margin-right: 3px;
+    margin-top: 3px;
+  }
 .quiz-box .answers-indicator div.correct{
   background-color: green;
   background-image: url("../img/correct.png");
@@ -252,4 +343,56 @@ body {
     body{
         padding: 15px;
     }
+}
+
+@media (max-width: 500px){
+    /** ==== INDEX.HTML ==== */
+    .menu-box table th, td {
+        padding: 5px 6px;
+        font-size: 15px;
+      }
+      
+      .flex-container .header-box .gerb {
+        width: 70px;
+        height: 70px;
+      }
+      
+      .menu-box .footer-box {
+        font-size: 13px;
+      }
+      
+      .flex-container .center-box h1 {
+        color: crimson;
+        font-size: 24px;
+      }
+
+
+    /** ==== QUIZ.HTML ==== */
+    .quiz-box .question-text {
+        font-size: 15px;
+        color: #000;
+        font-weight: 600;
+        padding: 10px 0px 10px;
+        line-height: 18px;
+        margin: 0;
+      }
+      .quiz-box .option-container .option {
+        background-color: #ccc;
+        padding: 8px 10px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        color: #000;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        text-transform: capitalize;
+        opacity: 0;
+        animation: fadeIn .3s ease forwards;
+        position: relative;
+        overflow: hidden;
+      } 
+      .btn {
+        padding: 10px 30px;
+    }   
 }

@@ -39,9 +39,9 @@ function setAvailableQuestions() {
 function getNewQuestion() {
     // set question number
     if (window.location.pathname === "/quiz-html/quiz0.html") {
-        questionNumber.innerHTML = (questionCounter + 1) + "-савол |" + " Савлоллар сони: " + 25;
+        questionNumber.innerHTML = (questionCounter + 1) + "-с |" + " Савлоллар " + 25 + " та";
     } else {
-        questionNumber.innerHTML = (questionCounter + 1) + "-савол |" + " Савлоллар сони: " + quiz.length;
+        questionNumber.innerHTML = (questionCounter + 1) + "-с |" + " Савлоллар " + quiz.length + " та";
     }
     // set question text
     // get random question
