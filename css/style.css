@@ -52,6 +52,7 @@ body {
 .flex-container .header-box {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: aqua;
     padding: 30px 20px;
     border-radius: 10px 10px 0 0;
